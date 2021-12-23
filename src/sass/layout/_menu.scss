@@ -1,0 +1,25 @@
+.menu {
+    @media screen and (max-width:767px) {
+        @include transition (transform);
+        position: fixed;
+       
+        top: 0;
+        right: 0;
+        padding: 118px 40px 227px; 
+        transform: translateX(100%);
+        background-color: $main-color;
+        width: 70vw;
+        height: 100vh;
+        &.is-open {
+            display: flex;
+            flex-direction: column;
+            transform: translateX(0);
+            justify-content: space-between;
+        }
+}
+@media screen and (min-width:$tablet) {
+display: flex;
+align-items: center;
+width: 100%;
+}
+}

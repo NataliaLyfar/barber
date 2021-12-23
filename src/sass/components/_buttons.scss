@@ -1,0 +1,64 @@
+.btn {
+    @extend %flex-center-style;
+    @include transition(background-color);
+    @include transition(color);
+    @include font (12px, 600, 1.33, 0.09em);
+    border: 1px solid $accent-color;
+    padding: 0;
+    border-radius: 25px;
+    min-width: 160px;
+    height: 40px;
+    background-color: transparent;
+    font-family: inherit;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $main-color;
+    }
+  }
+  // modal-close-btn
+  .close-btn {
+    @include transition (fill);
+    @include transition (border-color);
+  @extend %flex-center-style;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid $second-text-color;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+&:hover {
+  fill: $accent-color;
+  border: 1px solid $accent-color;
+}
+}
+.menu__btn {
+  @include transition (color);
+  position: absolute;
+  z-index: 3;
+  top: 48px;
+  right: 31px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &.is-open .icon__close {
+  display: block;
+  }
+  &.is-open .icon__menu {
+  display: none;
+  }
+  & .icon__close {
+  display: none;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @media screen and (min-width:$tablet) {
+  display: none;
+  }
+}

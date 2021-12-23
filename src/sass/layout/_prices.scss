@@ -1,0 +1,103 @@
+.prices {
+  margin: 0 auto;
+    background-image: url("../img/prices-mobile-min.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #111319;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/prices-mobile@2x-min.png");
+    }
+    @media screen and (min-width: 481px) {
+      background-image: url("../img/prices-tablet-min.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/prices-tablet@2x-min.png");
+      }
+    }
+    @media screen and (min-width: 769px) {
+      background-image: url("../img/prices-desktop-min.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/prices-desktop@2x-min.png");
+      }
+    }
+  }
+  .prices__pretitle {
+    margin-bottom: 20px;
+    color:rgba( $first-text-color, 0.6);
+    &::before {
+        background-color:rgba( $first-text-color, 0.6);
+      }
+  }
+  
+  .prices__title {
+    margin-bottom: 44px;
+    color: $main-color;
+  }
+  .prices__wrap {
+    background-image: linear-gradient(
+      180deg,
+      #090b13 0%,
+      rgba(9, 11, 19, 0.2) 100%
+    );
+    padding: 30px;
+    margin-bottom: 50px;
+    @media screen and (min-width:$tablet) {
+      padding: 30px 40px;
+    }
+    @media screen and (min-width:$desktop) {
+    display: flex;
+    padding: 0;
+    }
+  }
+  .prices__list {
+    @media screen and (min-width:$desktop) {
+    width: 50%;
+    padding: 30px 40px;
+  }
+}
+  .prices__list--light {
+    margin-bottom: 20px;
+    @media screen and (min-width:$desktop) {
+      margin-bottom: 0;
+    background-image: linear-gradient(
+      180deg,
+      #171a24 0%,
+      rgba(23, 26, 36, 0.2) 100%
+    );
+  }
+}
+  
+  .prices__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+      }
+    &::before {
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background-color: rgba(157, 164, 189, 0.12);
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+  }
+  
+  .prices__item-text {
+    @include font (14px, 400, 2.14, 0.02em);
+    color: $first-text-color;
+    &.description {
+        order: -1;
+      }
+      @media screen and (min-width:$tablet) {
+        @include font (18px, 400, 1.67, 0.02em);
+      }  
+  }
+  
+  .prices__btn {
+    display: block;
+    margin: 0 auto;
+    color: $main-color;
+  }

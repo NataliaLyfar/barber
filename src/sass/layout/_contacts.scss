@@ -1,0 +1,97 @@
+.contacts {
+  @media screen and (min-width:$desktop) {
+    width: calc(50% + 15px);
+    padding: 130px 0 130px 100px; 
+  }
+  margin: 0 -31px;
+    background-color: $tertiary-color;
+    background-image: url("../img/contacts-mobile-min.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)), url("../img/contacts-mobile@2x-min.png");
+    }
+    @media (min-width:481px) {
+     
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)), url("../img/contacts-tablet-min.png");
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) { 
+  background-image: linear-gradient(rgba($secondary-color, 0.4),
+   rgba($secondary-color, 0.4)), url("../img/contacts-tablet@2x-min.png");
+  }
+  }  
+    @media (min-width:769px) {
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop-min.png");
+      @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx)  {
+        background-image: linear-gradient(rgba($tertiary-color, 0.2),
+        rgba($tertiary-color, 0.2)), url("../img/contacts-desktop@2x-min.png");
+      }
+  }
+  }
+  .contacts__container {
+    padding: 0 31px;
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .shedule {
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+      width: 330px;
+    }
+  }
+  .address {
+    margin-bottom: 44px;
+    // width: 270px;
+  }
+  .contacts__title {
+    padding: 0 31px;
+    margin-bottom: 40px;
+    color: $main-color;
+    text-align: center;
+    @media  screen and (min-width:$tablet) {
+      text-align: left;
+      }
+  }
+  .contacts__link {
+    @include font (18px, 400, 1.67, 0.02em);
+    font-style: normal;
+    text-decoration-line: underline;
+    color: $first-text-color;
+    &:hover, &:focus {
+    color: $accent-color;
+    }
+  }
+  
+  .contacts__item:not(:last-child) {
+    margin-bottom: 20px;
+    & .contacts__link {
+    @include decotation (none);
+    }
+  }
+  .contact__text {
+    margin-bottom: 20px;
+    color: $main-color;
+    &::before {
+    @include transition (transform);
+    content: " ";
+    margin-right: 20px;
+    width: 60px;
+    height: 1px;
+    background-color:rgba( $first-text-color, 0.6);
+    }
+  }
+  
+  .schedule-text {
+    @include font (18px, 400, 1.67, 0.02em);
+    color: $first-text-color;
+  }

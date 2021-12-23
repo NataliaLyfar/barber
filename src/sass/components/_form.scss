@@ -1,0 +1,95 @@
+.input {
+  @include transition (border-color);
+  @extend %base-form-style;
+  width: 100%;
+  height: 45px;
+  border: 1px solid $first-text-color;
+  border-radius: 4px;
+  outline: none;
+  padding: 0 35px;
+  background-color: transparent;
+  text-align: left;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &:hover + .input__icon,
+  &:focus + .input__icon {
+    fill: $accent-color;
+  }
+  &::placeholder {
+  @extend %base-form-style;
+  }
+  }
+  
+  .form-field:not(:last-child) {
+  position: relative;
+  margin-bottom: 10px;
+  }
+  .input__icon {
+  @include transition (fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -10%);
+  fill: currentColor;
+  }
+  
+  .modal__btn {
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .label {
+  @extend %base-form-style;
+  margin-bottom: 5px;
+  display: block;
+  }
+  .textarea {
+  @extend %base-form-style;
+  width: 100%;
+  height: 100px;
+  border: 1px solid $first-text-color;
+  border-radius: 4px;
+  outline: none;
+  padding: 0 10px;
+  background-color: transparent;
+  text-align: left;
+  resize: none;
+ &:hover,
+ &:focus {
+    border: 1px solid $accent-color;
+  }
+  }
+  .check-field {
+  margin: 20px 0 30px;
+  }
+  .check-text {
+  @extend %base-form-style;
+  display: flex;
+  &::before {
+  content: "";
+  height: 15px;
+  width: 16px;
+  display: block;
+  border-radius: 2px;
+  margin-right: 5px;
+  border: 2px solid $tertiary-color;
+}
+}
+  
+  .check:checked + .check-text::before {
+  background-image: url(../img/icon-check.svg);
+  background-color: $accent-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+}
+ 
+  .policy-link {
+  color: $accent-color;
+  text-decoration-skip-ink: none;
+  &:hover, &:focus {
+  color: $accent-color;
+  }
+}

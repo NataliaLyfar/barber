@@ -1,0 +1,62 @@
+
+  .about__container {
+    @media screen and (min-width:$tablet) {
+      display: flex;
+  }
+}
+  .about__list {
+    display: none;
+    @media screen and (min-width:$tablet) {
+display: block;
+margin-right: 30px;
+flex-shrink: 0;
+    }
+    @media screen and (min-width:$desktop) {
+    display: flex;
+    margin-right: 64px;
+    flex-shrink: 0;
+    }
+  }
+  .about__item:not(:last-child) {
+    @media screen and (min-width:$tablet) {
+    margin-bottom: 30px;
+    }
+   @media screen and (min-width:$desktop) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+.about--right {
+  @media screen and (min-width:$tablet) {
+  flex-grow: 1;
+  }
+}
+  .about__pretitle {
+    margin-bottom: 20px;
+    color: $second-text-color;
+    &::before {
+      background-color: $second-text-color;
+    }
+  }
+  .about__title {
+    font-family: Raleway;
+  @include font (28px, 700, 1.17, 0.05em);
+  @media screen and (min-width:$desktop) {
+    @include font (42px, 700, 1.17, 0.05em);
+  }
+    margin-bottom: 20px;
+    color: $second-text-color;
+  }
+  .about__aftertitle {
+    margin-bottom: 20px;
+    color: $third-text-color;
+    text-align: left;
+  }
+  .about__text {
+    @include font (14px, 400, 1.86, 0.02em);
+    margin-bottom: 40px;
+    color: $third-text-color;
+  }
+  .about__btn {
+    color: $second-text-color;
+  }

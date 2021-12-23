@@ -1,0 +1,26 @@
+%flex-center-style {
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%primary-link-style {
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  &:hover,
+  &:focus {
+  color: $accent-color;
+}
+}
+%secondary-link-style {
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+%base-form-style {
+  font-size: 11px;
+  color: $second-text-color;
+  @media screen and (min-width:$tablet) {
+  font-size: 14px;
+  }
+}

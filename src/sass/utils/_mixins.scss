@@ -1,0 +1,12 @@
+@mixin transition ($property) {
+   transition: $property $transition-duration $transition-timing-function; 
+}
+@mixin font ($font-size, $font-weight, $line-height, $letter-spacing) {
+   font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+@mixin decotation ($value) {
+text-decoration: $value;
+}

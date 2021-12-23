@@ -1,0 +1,105 @@
+.reasons {
+    background-color: $main-color;
+  }
+  .reasons__container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    @media screen and (min-width:$desktop) {
+     flex-direction: row; 
+     justify-content: space-between;
+    }
+  }
+  .reasons--left {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:$tablet) {
+      width: 450px;
+    }
+    @media screen and (min-width:$desktop) {
+      width: 370px;
+      margin: 0 auto;
+      }
+  }
+  .reasons__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .reasons__item {
+width: 193px;
+    height: 133px;
+   padding: 20px 30px;
+    background-color: $secondary-color;
+    @media screen and (max-width:479px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width:$mobile) {
+    &:nth-child(odd) {
+        margin-right: 30px;
+      }
+      &:nth-child(even) {
+        margin-top: 30px;
+      }
+    }
+      @media screen and (min-width:$tablet) {
+        padding: 20px 40px;
+        width: 210px;
+      }
+    @media screen and (min-width:$desktop) {
+      padding: 20px;
+      width: 170px;
+    }
+  }
+  .reasons--right {
+    @media screen and (min-width:$tablet) {
+    margin-right: auto;
+    width: 500px;
+    }
+    @media screen and (min-width:$desktop) {
+      width: 460px;
+      margin: 0 auto;
+      }
+      
+  }
+  
+  .reasons__item-text {
+    @include font (11px, 600, 1.36, 0.02em);
+    text-align: center;
+    color: $second-text-color;
+  }
+  .reasons__count {
+    @include font (42px, 700, 1.36, 0.05em);
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $second-text-color;
+    &::after {
+        content: "+";
+        @include font (16px, 600, 1.38, 0.02em);
+        text-align: center;
+        color: $accent-color;
+      }
+  }
+  
+  .reasons__pretitle {
+    margin-bottom: 20px;
+    color: $second-text-color;
+    &::before {
+        background-color: $second-text-color;
+      }
+  }
+  .reasons__title {
+    margin-bottom: 20px;
+    color: $second-text-color;
+  }
+  .reasons__aftertitle {
+    @include font (18px, 400, 1.67, 0.02em);
+    color: $third-text-color;
+    margin-bottom: 44px;
+    @media screen and (min-width:$desktop) {
+      margin-bottom: 0;
+    }
+  }
