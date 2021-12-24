@@ -18,12 +18,17 @@
     align-items: center;
     margin-left: auto;
 &::before {
+  @include animation (rotateIn, 1s);
+  @include transition (background-color);
     content: "";
     width: 60px;
     height: 1px;
     background-color: $second-text-color;
     margin-right: 40px;
     }
+    &:hover::before,
+    &:focus::before {
+    background-color: $accent-color;}
     @media screen and (min-width:$tablet) {
       margin-bottom: 0;
     }

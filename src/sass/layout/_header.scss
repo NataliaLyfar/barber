@@ -70,10 +70,10 @@
       height: 1px;
       background-color: $second-text-color;
       margin-right: 40px;
-      &:hover,
-    &:focus {
-    background-color: $accent-color;}
     }
+    &:hover::before,
+    &:focus::before {
+    background-color: $accent-color;}
   }
   &:last-child {
     margin-left: 100px

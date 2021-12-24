@@ -10,3 +10,7 @@
 @mixin decotation ($value) {
 text-decoration: $value;
 }
+@mixin animation ($declaration, $duration) {
+animation: $declaration; 
+animation-duration: $duration;
+}

@@ -5,12 +5,17 @@
 .masters__container {
   margin: 0 auto;
     padding: 0 31px;
+    @media screen and (min-width:$mobile) {
+      width: $mobile;
+  }
     @media screen and (min-width:$tablet) {
-      padding: 0 159px;
+    padding: 0 159px;
+    width: $tablet;
   }
     @media screen and (min-width:$desktop) {
-        padding: 0 15px;
-    } 
+    padding: 0 15px;
+    width: $desktop;
+  } 
 }
 .masters__list {
   @media screen and (min-width:$desktop) {
@@ -26,7 +31,7 @@
     }
   }
   @media screen and (min-width:$desktop) {
-  flex-basis: calc((100% - 2 * 30px) / 3);
+  width: 370px;
   &:not(:last-child) {
     margin-right: 30px;
   }

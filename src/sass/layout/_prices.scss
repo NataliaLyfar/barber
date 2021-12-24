@@ -1,5 +1,14 @@
 .prices {
-  margin: 0 auto;
+ margin: 0 auto;
+@media screen and (min-width:$mobile) {
+width: $mobile;
+}
+@media screen and (min-width:$tablet) {
+width: $tablet;
+}
+@media screen and (min-width:$desktop) {
+width: $desktop;
+}
     background-image: url("../img/prices-mobile-min.png");
     background-position: center;
     background-size: cover;
