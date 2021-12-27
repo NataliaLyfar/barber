@@ -16,6 +16,15 @@
             transform: translateX(0);
             justify-content: space-between;
         }
+        &.is-open .icon__close {
+            display: block;
+            }
+            &.is-open .icon__menu {
+            display: none;
+            }
+            & .icon__close {
+            display: none;
+            }
 }
 @media screen and (min-width:$tablet) {
 display: flex;

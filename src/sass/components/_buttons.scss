@@ -39,21 +39,12 @@
 .menu__btn {
   @include transition (color);
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   top: 48px;
   right: 31px;
   padding: 0;
   border: none;
   background-color: transparent;
-  &.is-open .icon__close {
-  display: block;
-  }
-  &.is-open .icon__menu {
-  display: none;
-  }
-  & .icon__close {
-  display: none;
-  }
   &:hover,
   &:focus {
     color: $accent-color;
@@ -62,3 +53,4 @@
   display: none;
   }
 }
+

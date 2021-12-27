@@ -1,5 +1,4 @@
 .hero__container {
-  position: relative;
   margin: 0 auto;
   display: flex;
   @media screen and (min-width:$tablet) {
@@ -64,8 +63,57 @@
     color: $accent-color;
   }
   }
-
-  .hero--right {
+.hero--right {
+  @media screen and (max-width:767px) {
+    width: 100%;
+  }
+  @media screen and (min-width:$tablet) {
+    width: calc(100% - 93px);
+    flex-grow: 1;
+    & .slick-arrow {
+      width: 57px;
+      height: 30px;
+      top: 90%;
+      border-bottom: 1px solid rgba($first-text-color, 0.6);
+      &:focus, &:hover {
+          border-color: $main-color;
+        }
+      }
+      & .slick-prev {
+        @include transition (border-color);
+        left: 70%;
+        @media screen and (min-width:$desktop) {
+          left: 82%;}
+        &::before {
+          @include transition (color);
+          content: "Назад";
+          @include font (11px, 600, 1.36, 0.1em);
+          font-family: inherit;
+          text-align: left;
+          color: rgba($first-text-color, 0.6);
+        }
+        &:focus::before, &:hover::before {
+          color: $main-color;
+        }
+        } 
+    & .slick-next {
+      @include transition (border-bottom);
+      right: 37px;
+      &::before {
+        @include transition (color);
+        content: "Вперед";
+        @include font (11px, 600, 1.36, 0.1em);
+        font-family: inherit;
+        text-align: right;
+        color: rgba($first-text-color, 0.6);
+      }
+      &:focus::before, &:hover::before {
+        color: $main-color;
+      }
+      }
+  }
+}
+  .hero--right--1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -101,12 +149,64 @@
         rgba($tertiary-color, 0.2)), url("../img/hero-desktop@2x-min.jpg");
       }
   }
+}
+.hero--right--2 {
   @media screen and (max-width:767px) {
-    width: 100%;
+    display: none;
   }
-  @media screen and (min-width:$tablet) {
-    flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $secondary-color;
+  background-image: linear-gradient(
+    rgba($tertiary-color, 0.2),
+    rgba($tertiary-color, 0.2)
+  ),
+  url("../img/slider-tablet-1-min.jpg");
+@media (min-resolution: 2dppx) {
+  background-image: linear-gradient(rgba($tertiary-color, 0.2),
+    rgba($tertiary-color, 0.2)), url("../img/slider-tablet-1@2x-min.jpg");
+}
+  @media screen and (min-width:769px) {
+    background-image: linear-gradient(rgba($tertiary-color, 0.2),
+      rgba($tertiary-color, 0.2)), url("../img/slider-desktop-1-min.jpg");
+    @media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx)  {
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+      rgba($tertiary-color, 0.2)), url("../img/slider-desktop-1@2x-min.jpg");
+    }
+}
+}
+.hero--right--3 {
+  @media screen and (max-width:767px) {
+    display: none;
   }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $secondary-color;
+  background-image: linear-gradient(
+    rgba($tertiary-color, 0.2),
+    rgba($tertiary-color, 0.2)
+  ),
+  url("../img/slider-tablet-2-min.jpg");
+@media (min-resolution: 2dppx) {
+  background-image: linear-gradient(rgba($tertiary-color, 0.2),
+    rgba($tertiary-color, 0.2)), url("../img/slider-tablet-2@2x-min.jpg");
+}
+  @media screen and (min-width:769px) {
+    background-image: linear-gradient(rgba($tertiary-color, 0.2),
+      rgba($tertiary-color, 0.2)), url("../img/slider-desktop-2-min.jpg");
+    @media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx)  {
+      background-image: linear-gradient(rgba($tertiary-color, 0.2),
+      rgba($tertiary-color, 0.2)), url("../img/slider-desktop-2@2x-min.jpg");
+    }
+}
 }
   .hero__content {
     padding: 208px 0 183px 31px;

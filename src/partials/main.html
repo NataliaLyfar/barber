@@ -2,18 +2,20 @@
   <div class="container header__container">
       <a class="logo animate__animated animate__zoomIn" href="./index.html"
         ><svg class="logo-icon" width="66" height="56"><use href="./img/symbol-defs.svg#icon-Logo"></use></svg></a>
-        <button type="button" class="menu__btn" data-mobile-btn aria-expanded="false"
-        aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
+        <button type="button" class="menu__btn" data-mobile-open aria-expanded="false"
+        aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use>
         </svg> </button>
         <div class="menu" data-menu-container id="mobile-menu">
+        <button type="button" class="menu__btn" data-mobile-close aria-expanded="false"
+          aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
+          </svg> </button> 
     <nav class="header__navigation">
       <ul class="nav__list">
         <li class="nav__item">
           <a class="nav__link current" href="./index.html">О нас</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="./services&prices.html"
-            >Услуги и цены</a
+          <a class="nav__link" href="#services&prices">Услуги и цены</a
           >
         </li>
         <li class="nav__item">
@@ -28,7 +30,7 @@
       <a class="header__contacts--tel" href="tel:+380441111111"
         >+38 044 111 11 11</a
       >
-      <button class="header__button btn" type="button" data-modal-open>онлайн-запись</button>
+      <button class="header__button btn" data-modal-open type="button">онлайн-запись</button>
     </div>
       <ul class="connect__list">
         <li class="connect__item">
@@ -50,7 +52,32 @@
           <li class="hero__item"><a href="" class="hero__link">Youtube</a></li>
         </ul>
 </div> 
-      <div class="hero--right">
+<div class="hero--right">
+      <div class="hero--right--1">
+        <div class="hero__content">
+        <p class="hero__pretitle pretitle" lang="en">
+          A hair salon for men in Kyiv
+        </p>
+        <h1 class="hero__title" lang="en">BarberShop</h1>
+        <p class="hero__aftertitle aftertitle">
+          Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
+          и со вкусом.
+        </p>
+      </div>
+      </div>
+      <div class="hero--right--2">
+        <div class="hero__content">
+        <p class="hero__pretitle pretitle" lang="en">
+          A hair salon for men in Kyiv
+        </p>
+        <h1 class="hero__title" lang="en">BarberShop</h1>
+        <p class="hero__aftertitle aftertitle">
+          Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
+          и со вкусом.
+        </p>
+      </div>
+      </div>
+      <div class="hero--right--3">
         <div class="hero__content">
         <p class="hero__pretitle pretitle" lang="en">
           A hair salon for men in Kyiv
@@ -63,7 +90,7 @@
       </div>
       </div>
     </div>
-    
+    </div>
   </section>
   <!--О нас-->
   <section class="about section">
@@ -114,7 +141,7 @@
           клиентами "на одной волне". Поэтому, мы всегда готовы
           усовершенствовать каждого, кто к нам приходит!
         </p>
-        <button class="about__btn btn" type="button">онлайн-запись</button>
+        <button class="about__btn btn" data-modal-open type="button">онлайн-запись</button>
       
     </div>
   </section>
