@@ -1,7 +1,8 @@
 .menu {
     @media screen and (max-width:767px) {
         @include transition (transform);
-        position: absolute;   
+        position: fixed;  
+        z-index: 2; 
         top: 0;
         right: 0;
         padding: 118px 40px 227px; 
