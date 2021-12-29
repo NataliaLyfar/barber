@@ -69,7 +69,7 @@
   }
   @media screen and (min-width:$tablet) {
     width: calc(100% - 93px);
-    flex-grow: 1;
+    flex-grow: 1;}
     & .slick-arrow {
       width: 57px;
       height: 30px;
@@ -87,6 +87,7 @@
         &::before {
           @include transition (color);
           content: "Назад";
+          font-size: 11px;
           @include font (11px, 600, 1.36, 0.1em);
           font-family: inherit;
           text-align: left;
@@ -111,7 +112,6 @@
         color: $main-color;
       }
       }
-  }
 }
   .hero--right--1 {
     background-repeat: no-repeat;
@@ -151,9 +151,6 @@
   }
 }
 .hero--right--2 {
-  @media screen and (max-width:767px) {
-    display: none;
-  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -180,9 +177,6 @@
 }
 }
 .hero--right--3 {
-  @media screen and (max-width:767px) {
-    display: none;
-  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
