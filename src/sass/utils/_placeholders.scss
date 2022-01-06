@@ -24,3 +24,24 @@ display: flex;
   font-size: 14px;
   }
 }
+%btn-style {
+  position: relative;
+  overflow: hidden;
+    @extend %flex-center-style;
+    border: 1px solid $accent-color;
+    padding: 0;
+    border-radius: 25px;
+    min-width: 160px;
+    height: 40px;
+    color: $accent-color;
+    background-color: transparent;
+    font-family: inherit;
+    text-transform: uppercase;
+    &:hover, &:focus {
+    color: $tertiary-color;
+    }
+  span {
+    z-index: -1;
+  } 
+  
+}

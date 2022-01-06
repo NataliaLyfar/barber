@@ -1,25 +1,11 @@
 .btn {
-  position: relative;
-  overflow: hidden;
-    @extend %flex-center-style;
     @include transition(background-color);
     @include transition(color);
     @include font (12px, 600, 1.33, 0.09em);
-    border: 1px solid $accent-color;
-    padding: 0;
-    border-radius: 25px;
-    min-width: 160px;
-    height: 40px;
-    color: $accent-color;
-    background-color: transparent;
-    font-family: inherit;
-    text-transform: uppercase;
-    &:hover, &:focus {
-    color: $tertiary-color;
-    }
+   @extend %btn-style;
   span {
     @include transition(all);
-    z-index: -1;
+    
   } 
   & .first {
     content: "";
@@ -75,9 +61,18 @@
   }
   }
   .btn--center {
+    @include transition(background-color);
     margin: 0 auto;
+    &:hover, &:focus {
+      background-color: $accent-color;
+      }
   }
-
+.btn--submit {
+  @include transition(background-color);
+  &:hover, &:focus {
+    background-color: $accent-color;
+    }
+}
   // modal-close-btn
   .close-btn {
     @include transition (fill);
