@@ -45,12 +45,6 @@
     margin: 0 0 0 37px;
   }
 }
-  .header__button {
-    color: $second-text-color;
-    @media screen and (min-width:$tablet) {
-    color: $main-color;
-  }
-}
 
 .connect__list {
 @media screen and (min-width:$tablet) {

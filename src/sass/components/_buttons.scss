@@ -1,4 +1,6 @@
 .btn {
+  position: relative;
+  overflow: hidden;
     @extend %flex-center-style;
     @include transition(background-color);
     @include transition(color);
@@ -8,15 +10,74 @@
     border-radius: 25px;
     min-width: 160px;
     height: 40px;
+    color: $accent-color;
     background-color: transparent;
     font-family: inherit;
     text-transform: uppercase;
-    &:hover,
-    &:focus {
-      background-color: $accent-color;
-      color: $main-color;
+    &:hover, &:focus {
+    color: $tertiary-color;
     }
+  span {
+    @include transition(all);
+    z-index: -1;
+  } 
+  & .first {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
   }
+  &:hover .first, &:focus .first  {
+    top: 0;
+    right: 0;
+  }
+  & .second {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -100%;
+    width: 25%;
+    height: 100%;
+    background-color: $accent-color;
+  }
+  &:hover .second, &:focus .second {
+    top: 0;
+    left: 50%;
+  }
+  & .third {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 25%;
+    height: 100%;
+    background-color: $accent-color;
+  }
+  &:hover .third, &:focus .third {
+    top: 0;
+    left: 25%;
+  }
+  & .fourth {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: $accent-color;
+  }
+  &:hover .fourth, &:focus .fourth {
+    top: 0;
+    left: 0;
+  }
+  }
+  .btn--center {
+    margin: 0 auto;
+  }
+
   // modal-close-btn
   .close-btn {
     @include transition (fill);
