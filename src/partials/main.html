@@ -1,28 +1,27 @@
 <header class="header">
-  <div class="container header__container">
+  <div class="header__container">
       <a class="logo animate__animated animate__zoomIn" href="./index.html"
         ><svg class="logo-icon" width="66" height="56"><use href="./img/symbol-defs.svg#icon-Logo"></use></svg></a>
-        <button type="button" class="menu__btn" data-mobile-open aria-expanded="false"
-        aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use>
+        <button type="button" class="menu__btn mobile-open" 
+        ><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-menu_40px" class="icon__menu"></use>
         </svg> </button>
-        <div class="menu" data-menu-container id="mobile-menu">
-        <button type="button" class="menu__btn" data-mobile-close aria-expanded="false"
-          aria-controls="mobile-menu"><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
+        <div class="menu is-hidden">
+        <button type="button" class="menu__btn mobile-close" ><svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню"><use href="img/symbol-defs.svg#icon-close_40px" class="icon__close"></use>
           </svg> </button> 
     <nav class="header__navigation">
       <ul class="nav__list">
         <li class="nav__item">
-          <a class="nav__link current" target="_blank" href="./index.html#about">О нас</a>
+          <a class="nav__link current js-about" href="#about">О нас</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" target="_blank" href="./index.html#services&prices">Услуги и цены</a
+          <a class="nav__link js-service" href="#services&prices">Услуги и цены</a
           >
         </li>
         <li class="nav__item">
-          <a class="nav__link" target="_blank" href="./index.html#our-masters">Мастера</a>
+          <a class="nav__link js-masters" href="#our-masters">Мастера</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" target="_blank" href="./index.html#contacts">Контакты</a>
+          <a class="nav__link js-contacts" href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -39,22 +38,26 @@
     </div>
       <ul class="connect__list">
         <li class="connect__item">
-          <a href="" class="connect__link">Instagram</a>
+          <a target="_blank" href="https://www.instagram.com/" class="connect__link">Instagram</a>
         </li>
-        <li class="connect__item"><a href="" class="connect__link">Youtube</a></li>
+        <li class="connect__item"><a target="_blank" href="https://www.youtube.com/" class="connect__link">Youtube</a></li>
       </ul>
   </div>
   </div>
 </header>
 <main>
+  <div class="main-wrapper">
+    <a href="#top" class="scrolltop">
+      <span class="scroll-top__btn scroll-top__btn--up"></span>
+    </a>
   <section class="hero">
     <div class="hero__container">
       <div class="hero--left">
         <ul class="hero__list">
           <li class="hero__item">
-            <a href="" class="hero__link">Instagram</a>
+            <a target="_blank" href="https://www.instagram.com/" rel="noopener" class="hero__link">Instagram</a>
           </li>
-          <li class="hero__item"><a href="" class="hero__link">Youtube</a></li>
+          <li class="hero__item"><a target="_blank" href="https://www.youtube.com/" rel="noopener" class="hero__link">Youtube</a></li>
         </ul>
 </div> 
 <div class="hero--right">
@@ -97,6 +100,7 @@
     </div>
     </div>
   </section>
+  </div>
   <!--О нас-->
   <section class="about section" id="about">
     <div class="container about__container">
@@ -146,7 +150,7 @@
           клиентами "на одной волне". Поэтому, мы всегда готовы
           усовершенствовать каждого, кто к нам приходит!
         </p>
-        <button class="btn" data-modal-open type="button">онлайн-запись<span class="first"></span>
+        <button class="btn" data-modal2-open type="button">онлайн-запись<span class="first"></span>
           <span class="second"></span>
           <span class="third"></span>
           <span class="forth"></span></button>
@@ -204,7 +208,7 @@
           </li>
         </ul>
       </div>
-      <button class="btn btn--center" type="button">
+      <button class="btn btn--center" data-modal3-open type="button">
         онлайн-запись
         <span class="first"></span>
         <span class="second"></span>
@@ -283,16 +287,16 @@
             <p class="masters__position" lang="en">Extreme Barber</p>
             <ul class="social__list">
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.instagram.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.twitter.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.facebook.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.linkedin.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
               </li>
             </ul>
           </div>
@@ -322,16 +326,16 @@
             <p class="masters__position" lang="en">Extreme Barber</p>
             <ul class="social__list">
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.instagram.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.twitter.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.facebook.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.linkedin.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
               </li>
             </ul>
           </div>
@@ -361,16 +365,16 @@
             <p class="masters__position" lang="en">Extreme Barber</p>
             <ul class="social__list">
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.instagram.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-instagram-2"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.twitter.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-twitter-1"></use></svg></a>
               </li>
                <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.facebook.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-facebook-1"></use></svg></a>
               </li>
               <li class="social__item">
-                <a href="" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
+                <a target="_blank" rel='noopener' href="https://www.linkedin.com/" class="social__link"><svg class="social__icon" width="20" height="20"><use href="./img/symbol-defs.svg#icon-linkedin-1"></use></svg></a>
               </li>
             </ul>
           </div>
@@ -528,8 +532,8 @@
 <div class="container footer__container">
   <p class="footer__copy">&#169;Copyright 2020</p>
   <ul class="footer__list">
-    <li class="footer__item"><a class="footer__link" href="">Instagram</a></li>
-    <li class="footer__item"><a class="footer__link" href="">Youtube</a></li>
+    <li class="footer__item"><a rel='noopener' class="footer__link" target="_blank" href="https://www.instagram.com/">Instagram</a></li>
+    <li class="footer__item"><a rel='noopener' class="footer__link" target="_blank" href="https://www.youtube.com/">Youtube</a></li>
   </ul>
 </div> 
 </footer>
@@ -555,7 +559,7 @@
       </div>
       <div class="check-field">
         <input type="checkbox" id="checkbox" class="check visually-hidden">
-        <label for="checkbox" class="check-text">Соглашаюсь на рассылку, принимаю <a href="" class="policy-link">&nbspУсловия договора</a></label>
+        <label for="checkbox" class="check-text">Соглашаюсь и принимаю <a href="" class="policy-link">&nbspУсловия договора</a></label>
         
       </div>
         

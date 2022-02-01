@@ -76,7 +76,6 @@
   border: 2px solid $tertiary-color;
 }
 }
-  
   .check:checked + .check-text::before {
   background-image: url(../img/icon-check.svg);
   background-color: $accent-color;

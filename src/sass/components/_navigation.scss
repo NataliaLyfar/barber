@@ -29,7 +29,7 @@
   color: $main-color;
   position: relative;
   display: block;
-  padding: 52px 0;
+  padding: 45px 0;
   &.current::after {
   position: absolute;
   content: "";
@@ -41,7 +41,5 @@
   left: 0;
 }
 }
-@media screen and (min-width:$desktop) {
-  padding: 48px 0;
-}
+
 }

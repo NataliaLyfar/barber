@@ -36,20 +36,21 @@
     margin-right: 30px;
   }
   }
-  &:hover .masters__overlay {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  
 }
 .overlay-thumb {
+  @include transition (opacity);
+  @include transition (transform);
   position: relative;
   width: 100%;
   height: auto;
 overflow: hidden;
+&:hover .masters__overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
 }
 .masters__overlay {
-  @include transition (opacity);
-  @include transition (transform);
   position: absolute; 
   top: 0;
   left: 0;

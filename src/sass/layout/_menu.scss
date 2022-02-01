@@ -1,34 +1,26 @@
 .menu {
+position: fixed;
+top: 0;
+right: 0;
     @media screen and (max-width:767px) {
-        @include transition (transform);
-        position: fixed;  
-        z-index: 2; 
-        top: 0;
-        right: 0;
-        padding: 118px 40px 227px; 
-        transform: translateX(100%);
+        @include transition (visibility);
+        padding: 115px 20px 70px; 
+        @media screen and (min-width:$mobile) and (max-width:767px) {
+        padding: 115px 40px 70px; 
+        width: 60vw;
+        }
         background-color: $main-color;
-        width: 70vw;
+        width: 80vw;
         height: 100vh;
-        &.is-open {
+       
             display: flex;
             flex-direction: column;
-            transform: translateX(0);
             justify-content: space-between;
-        }
-        &.is-open .icon__close {
-            display: block;
-            }
-            &.is-open .icon__menu {
-            display: none;
-            }
-            & .icon__close {
-            display: none;
-            }
 }
-@media screen and (min-width:$tablet) {
+@media screen and (min-width:$tablet) { 
 display: flex;
-align-items: center;
-width: 100%;
+position: static;
+
+width: calc(100% - 93px);
 }
 }
